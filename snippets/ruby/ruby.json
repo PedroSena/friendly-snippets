@@ -53,22 +53,6 @@
       "end"
     ]
   },
-  "for loop": {
-    "prefix": "for",
-    "body": [
-      "for ${1:value} in ${2:enumerable} do",
-      "\t$0",
-      "end"
-    ]
-  },
-  "if": {
-    "prefix": "if",
-    "body": [
-      "if ${1:test}",
-      "\t$0",
-      "end"
-    ]
-  },
   "if else": {
     "prefix": "ife",
     "body": [
@@ -206,26 +190,6 @@
       "end"
     ]
   },
-  "Insert do … end block": {
-    "prefix": "do",
-    "body": [
-      "do",
-      "\t$0",
-      "end"
-    ]
-  },
-  "Insert do |variable| … end block": {
-    "prefix": "dop",
-    "body": [
-      "do |${1:variable}|",
-      "\t$0",
-      "end"
-    ]
-  },
-  "Insert encoding comment": {
-    "prefix": "enc",
-    "body": "# encoding: utf-8$0"
-  },
   "Insert frozen literal string": {
     "prefix": "frozen",
     "body": [
@@ -250,10 +214,6 @@
   "Insert inctance variable cache": {
     "prefix": "ivc",
     "body": "@${1:variable_name} ||= ${0:cached_value}"
-  },
-  "Insert each with inline block": {
-    "prefix": "ea",
-    "body": "each { |${1:e}| $0 }"
   },
   "Insert each with multiline block": {
     "prefix": "ead",
@@ -299,17 +259,9 @@
       "end"
     ]
   },
-  "Insert lambda arrow": {
-    "prefix": "->",
-    "body": "-> { $0 }"
-  },
   "Insert lambda arrow with arguments": {
     "prefix": "->a",
     "body": "->(${1:args}) { $0 }"
-  },
-  "Insert byebug call": {
-    "prefix": "bye",
-    "body": "require 'byebug'; byebug"
   },
   "Insert debug call": {
     "prefix": "debug",
@@ -317,7 +269,7 @@
   },
   "Insert pry call": {
     "prefix": "pry",
-    "body": "require 'pry'; binding.pry"
+    "body": "binding.pry"
   },
   "Insert irb call": {
     "prefix": "irb",
@@ -366,10 +318,6 @@
   "Insert let": {
     "prefix": "let",
     "body": "let(:${1:object}) { $0 }"
-  },
-  "Insert let!": {
-    "prefix": "let!",
-    "body": "let!(:${1:object}) { $0 }"
   },
   "Insert subject definition": {
     "prefix": "subj",
