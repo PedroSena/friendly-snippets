@@ -177,17 +177,16 @@
     "body": [
       "# frozen_string_literal: true",
       "",
-      "",
       ""
     ]
   },
   "Insert require": {
     "prefix": "req",
-    "body": "require '${1}'$0"
+    "body": "require \"${1}\"$0"
   },
   "Insert require_relative": {
     "prefix": "reqr",
-    "body": "require_relative '${1}'$0"
+    "body": "require_relative \"${1}\"$0"
   },
   "Insert attr_accessor": {
     "prefix": "rw",
@@ -247,7 +246,7 @@
   },
   "Insert debug call": {
     "prefix": "debug",
-    "body": "require 'debug'; debugger"
+    "body": "require \"debug\"; debugger"
   },
   "Insert pry call": {
     "prefix": "pry",
@@ -276,15 +275,15 @@
   "Insert describe block": {
     "prefix": "descm",
     "body": [
-      "describe '${1:#method}' do",
-      "\t${0:pending 'Not implemented'}",
+      "describe \"${1:#method}\" do",
+      "\t${0:pending \"Not implemented\"}",
       "end"
     ]
   },
   "Insert context block": {
     "prefix": "cont",
     "body": [
-      "context '${1:message}' do",
+      "context \"${1:message}\" do",
       "\t$0",
       "end"
     ]
@@ -323,16 +322,16 @@
   },
   "Insert shared_examples": {
     "prefix": "shared",
-    "body": "shared_examples '${0:shared examples name}'"
+    "body": "shared_examples \"${0:shared examples name}\""
   },
   "Insert it_behaves_like": {
     "prefix": "ibl",
-    "body": "it_behaves_like '${0:shared examples name}'"
+    "body": "it_behaves_like \"${0:shared examples name}\""
   },
   "Insert it block": {
     "prefix": "it",
     "body": [
-      "it '${1:spec_name}' do",
+      "it \"${1:spec_name}\" do",
       "\t$0",
       "end"
     ]
